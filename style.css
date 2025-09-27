@@ -269,7 +269,8 @@ ul li a:hover {
 
 #social-media a:hover {
     background: var(--highlight-color);
-    
+    border: 1.5px solid var(--text-color);
+    transition: 0.3s;
    
 
 }
