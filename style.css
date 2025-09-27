@@ -57,7 +57,8 @@ body {
 #container {
     /* border: 1px solid red; */
     height: 712px;
-    width: 360px;
+    width: 100%;
+    max-width: 588px;
     margin: auto;
     /* padding: 100px; */
     /* display: flex; */
