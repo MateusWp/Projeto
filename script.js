@@ -17,7 +17,7 @@ function toggleMode() {
         switchButtonIcon.src = "./assets/moon-stars.svg";
         switchButtonIcon.alt = "Dark mode icon";
         // profile.setAttribute("src", "./assets/me-dark.jpeg");
-        profile.src = "./assets/me-dark.jpeg";
+        profile.src = "./assets/me-dark.jpg";
     }
 
 
