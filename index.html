@@ -6,8 +6,26 @@
   <title>DevLinks</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>
+  (function(){
+    const theme = localStorage.getItem('theme');
+    if(theme === 'light'){
+      document.documentElement.classList.add('light');
+    } else if(theme === 'dark'){
+      document.documentElement.classList.remove('light');
+    } else {
+      // Detecta preferência do sistema (opcional)
+      if(window.matchMedia('(prefers-color-scheme: light)').matches){
+        document.documentElement.classList.add('light');
+      }
+    }
+  })();
+</script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
+  <link rel="preload" as="image" href="/assets/moon-stars.svg">
+  <link rel="preload" as="image" href="/assets/sun.svg">
+  
 </head>
 <body>
   <header>
@@ -24,23 +42,23 @@
       
       <div id="switch" onclick="toggleMode()">
         <button aria-label="Ativar modo escuro">
-          <img id="switch-icon" src="./assets/moon-stars.svg" alt="Ativar Dark mode">
+          <img id="switch-icon" src="./assets/sun.svg" alt="Ativar Dark mode">
         </button>
         <span></span>      
       </div>
 
       <ul>
-        <li><a href="https://youtu.be/iywaBOMvYLI?si=G7Ow7wPPUOqb2fM1" target="_blank">Toxicity - SOAD</a></li>
+        <li><a href="https://youtu.be/6nQCxwneUwA?si=UpFpk_Clgj3kHEZw" target="_blank">Satellite - Rise Against 🎵</a></li>
         <!-- <li><a href="https://www.instagram.com/mateus.cv/" target="_blank">Instagram</a></li> -->
         <li><a href="https://github.com/MateusWp" target="_blank">Portfolio</a></li>
-        <li><a href="https://www.linkedin.com/in/mateus-calvet-ba7631132/" target="_blank">Contato</a></li>
+        <li><a href="mailto:mateuscalvet@gmail.com">Me mande um e-mail! 📬</a></li>
       </ul>
 
       <div id="social-media">
         <a href="https://www.instagram.com/mateus.cv/" target="_blank" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
-        <a href="https://github.com/MateusWp" target="_blank" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+        <a href="https://wa.me/47999276446?text=Olá!" target="_blank" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a>
         <a href="https://www.linkedin.com/in/mateus-calvet-ba7631132/" target="_blank" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
-        <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><ion-icon name="logo-youtube"></ion-icon></a>
+        <!-- <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><ion-icon name="logo-youtube"></ion-icon></a> -->
       </div>
     </section>
   </main>
